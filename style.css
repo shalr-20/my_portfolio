@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+    --primry-color: #007bff;
+    --secondary-color: #082844;
+    --text-dark:#000;
+    --text-light:#6c757d;
+    --extra-light:#f8f9fa;
+    --white:#fff;
+    --max-width:1200px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section_container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section_subheader{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primry-color);
+    text-align: center;
+}
+
+.section_header{
+    font-size: 2.5rem;
+    font-weight: none;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.btn{
+    padding: .625rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primry-color);
+    border: 2px solid var(--primry-color);
+    border-radius: 5rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: var(--secondary-color);
+    background-color: transparent;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+img{
+    display: flex;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul{
+    list-style: none;
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+nav{
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+}
+
+.nav__header{
+    padding: .75rem 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primry-color);
+}
+
+.nav__logo a{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.nav__menu__btn{
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav__links{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--primry-color);
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.nav__links.open{
+    transform: translateY(100%);
+}
+
+.nav__links a{
+    font-weight: 600;
+    color: var(--white);
+}
+
+.nav__btns{
+    display: none;
+}
+
+@media (width > 768px){
+    nav{
+        position: static;
+        padding: 2rem 1rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+}
