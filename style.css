@@ -151,14 +151,14 @@ header{
     margin-top: 2rem;
 }
 
-.header__content h2{
+.header__content h2, .section__subheader{
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--primry-color);
     text-align: center;
 }
 
-.header__content h1{
+.header__content h1, .section__header{
     margin-bottom: 1rem;
     font-size: 4rem;
     font-weight: 800;
@@ -175,7 +175,7 @@ header{
     text-align: center;
 }
 
-.header__content p{
+.header__content p, .intro__description{
     margin-bottom: 2rem;
     color: var(--text-light);
     text-align: center;
