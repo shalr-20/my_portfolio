@@ -175,7 +175,7 @@ header{
     text-align: center;
 }
 
-.header__content p, .intro__description{
+.header__content p{
     margin-bottom: 2rem;
     color: var(--text-light);
     text-align: center;
@@ -192,6 +192,77 @@ header{
 .header__btns .btn:nth-child(2){
     color: var(--secondary-color);
     background-color: transparent;
+}
+
+.intro__container{
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.intro__image{
+    position: relative;
+    isolation: isolate;
+    max-width: 350px;
+    margin-inline: auto;
+    padding: 4px;
+    overflow: hidden;
+}
+
+.intro__image::before{
+    position: absolute;
+    content: "";
+    height: 200%;
+    width: 10rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-35deg);
+    transform-origin: center center;
+    background-color: var(--primry-color);
+    z-index: -1;
+}
+
+.intro__image img{
+    background-color: var(--white);
+}
+
+.intro__content :is(.section__subheader, .section__header){
+    text-align: left;
+}
+
+.intro__description{
+    margin-block: 1rem 2rem;
+    color: var(--text-light);
+    line-height: 1.75rem;
+}
+
+.intro__grid{
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: max-content max-content 1fr;
+    gap: 0.5rem 1rem;
+}
+
+.intro__grid h5{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.intro__grid h5 span{
+    font-size: 1.2rem;
+    color: var(--primry-color);
+}
+
+.intro__grid>span{
+    color: var(--text-dark);
+}
+
+.intro__content h4{
+    margin-bottom: 0.5rem;
 }
 
 @media (width>768px){
