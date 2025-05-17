@@ -85,3 +85,8 @@ ScrollReveal().reveal(".intro__flex div",{
     delay: 3000,
     interval: 500,
 });
+
+ScrollReveal().reveal(".journey__grid > div > div",{
+    ...scrollRevealOption,
+    interval: 500,
+});

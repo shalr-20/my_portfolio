@@ -309,6 +309,132 @@ h4{
     color: var(--tertiary-color);
 }
 
+.choose p{
+    margin-top: 10px;
+    font-size: 2.5rem;
+    padding-top: 20px;
+}
+
+.choose h2{
+    margin-top: 10px;
+    font-size: 3.5rem;
+}
+
+.choose{
+    background-color: var(--extra-light);
+}
+
+.choose__card h4{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.choose__grid{
+    max-width: 900px;
+    margin-inline:auto;
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem 4rem;
+}
+
+.choose__grid {
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    padding-bottom: 100px;
+  }
+  
+  .choose__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 4rem;
+  }
+  
+  .choose__card h4 {
+    background: #aebae9;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .journey__grid{
+    max-width: 900px;
+    margin-inline: auto;
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 7rem;
+  }
+
+  .journey__grid > div{
+    display: grid;
+    gap: 1rem;
+  }
+
+  .journey__grid__header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+
+  .journey__card{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .journey__card > span{
+    position: relative;
+    isolation: isolate;
+    padding-inline: 2px;
+    height: 100%;
+    font-size: 1.2rem;
+    color: var(--primry-color);
+  }
+
+  .journey__card > span::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primry-color);
+  }
+
+  .journey__card h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .journey__card h5{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+
+  .journey__card p{
+    color: var(--text-light);
+  }
+
+@media(width > 540px){
+    .journey__grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (width>768px){
     nav{
         position: static;
@@ -387,5 +513,9 @@ h4{
 
     .intro__grid{
         gap: 0.5rem 2rem;
+    }
+
+    .journey__grid{
+        gap: 2rem 4rem;
     }
 }
