@@ -429,6 +429,19 @@ h4{
     color: var(--text-light);
   }
 
+  .service__grid{
+    margin-top: 4rem;
+    display: grid;
+    gap: 4rem 2rem;
+  }
+
+  .service__card{
+    padding-block: 0 1.5rem;
+    padding-inline: 1.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 3rem;
+  }
+
 @media(width > 540px){
     .journey__grid{
         grid-template-columns: repeat(2, 1fr);
