@@ -90,3 +90,5 @@ ScrollReveal().reveal(".journey__grid > div > div",{
     ...scrollRevealOption,
     interval: 500,
 });
+
+const mixer=mixitup(".portfolio__grid");

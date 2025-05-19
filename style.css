@@ -432,7 +432,8 @@ h4{
   .service__grid{
     margin-top: 4rem;
     display: grid;
-    gap: 4rem 2rem;
+    gap: 4rem 1rem;
+    margin: 1.5rem;
   }
 
   .service__card{
@@ -440,7 +441,136 @@ h4{
     padding-inline: 1.5rem;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-top-right-radius: 3rem;
+    transition: 0.3s;
   }
+
+  .service__card:hover{
+    background-color: var(--primry-color);
+    border-color: var(--primry-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .service__card span{
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 2rem;
+    color: var(--white);
+    background-color: var(--primry-color);
+    transform: translateY(-50%);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+
+  .service__card:hover span{
+    color: var(--primry-color);
+    background-color: var(--white);
+  }
+
+  .service__card h3{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
+
+.service__card p{
+    color: var(--text-light);
+    line-height: 1.75rem;
+    transition: 0.3s;
+}
+
+.service__card:hover :is(h3, p){
+    color: var(--white);
+}
+
+.service__grid{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.portfolio{
+    background-color: var(--extra-light);
+}
+
+.portfolio__nav{
+    margin-block: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.portfolio__nav .btn{
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: none;
+}
+
+.portfolio__nav .btn.mixitup-control-active{
+    color: var(--primry-color);
+}
+
+.portfolio__grid{
+    display: grid;
+    gap: 1rem;
+}
+
+.portfolio__card img{
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio__grid{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.banner__container{
+    display: grid;
+    gap: 2rem;
+    background: url("assets/banner.jpeg"), var(--primry-color);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.banner__content{
+    padding-block: 5rem 0;
+    padding-inline: 1rem;
+}
+
+.banner__content .section__header{
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.banner__content p{
+    margin-bottom: 1rem;
+    color: var(--white);
+    line-height: 1.75rem;
+    text-align: center;
+}
+
+.banner__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner__btn .btn{
+    color: var(--primry-color);
+    background-color: var(--white);
+}
+
+.banner__image{
+    position: relative;
+    isolation: isolate;
+    height: 100%;
+}
 
 @media(width > 540px){
     .journey__grid{
@@ -530,5 +660,45 @@ h4{
 
     .journey__grid{
         gap: 2rem 4rem;
+    }
+
+    .service__grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio__grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .banner__container{
+        grid-template-columns: 
+        minmax(0,1fr)
+        minmax(0,calc(var(--max-width)/2))
+        minmax(0,calc(var(--max-width)/2))
+        minmax(0,1fr);
+        align-items: center;
+    }
+
+    .banner__content{
+        padding-block: 5rem;
+        grid-column: 2/3;
+    }
+
+    .banner__content :is(.section__header, p){
+        text-align: left;
+    }
+
+    .banner__btn{
+        justify-content: flex-start;
+    }
+}
+
+@media(width>1024px){
+    .service__grid{
+        gap: 4rem 1.5rem;
+    }
+
+    .portfolio__grid{
+        gap: 1.5rem;
     }
 }
